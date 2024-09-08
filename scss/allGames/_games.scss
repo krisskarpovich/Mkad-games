@@ -1,0 +1,119 @@
+
+.games {
+  margin: 0;
+  padding-bottom: 40px;
+  
+  background: $backColor;
+  color: #eee;
+  position: relative;
+
+  &__account{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+		// .games__cards
+
+		&__cards {
+      font-family: $fontfamily;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  
+    }
+
+}
+
+
+
+.card {
+		&__item {
+      padding: 20px 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // max-height: 200px;
+      
+    }
+}
+.nft{
+  @include adaptiv-value(padding-top, 20, -10, 1);
+  @include adaptiv-value(padding-right, 20, -10, 1);
+  @include adaptiv-value(padding-left, 20, -10, 1);
+  @include adaptiv-value(padding-bottom, 20, -10, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  user-select:none;
+  max-width: 300px;
+  border: 1px solid #7c14b488;
+  background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: .5s all;
+  hr{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #55058793;
+    margin-top: 0;
+  }
+  
+  
+  ::before{
+    position: fixed;
+    content: "";
+    box-shadow: 0 0 100px 40px #6c21c168;
+    top: -10%;
+    left: -100%;
+    transform: rotate(-45deg);
+    height: 60rem;
+    transition: .7s all;
+  }
+  &:hover{
+    border: 1px solid #ffffff44;
+    box-shadow: 0 7px 50px 10px #5406c2aa;
+    transform: scale(1.015);
+    filter: brightness(1.3);
+    ::before{
+      filter: brightness(.5);
+      top: -100%;
+      left: 200%;
+    }
+  }
+		// .nft__img
+
+    &__img {
+      border-radius: .5rem;
+      @include adaptiv-value( max-width, 200, 150, 1);
+    max-width: 200px;
+    object-fit: cover;
+  }
+  // .card-game__title
+  &__title {
+    @include adaptiv-value(margin-top, 20, -5, 1);
+      margin-bottom: 10px;
+      font-family: "Rubik Mono One";
+      text-align: center;
+      font-size: rem(22);
+
+  }
+  // .card-game__btn
+  &__btn {
+      font-size: 20px;
+  }
+}
+
+.material-symbols-outlined{
+  color: rgb(85, 0, 128);
+  font-size: rem(100);
+  text-shadow: #7c15b736 8px 8px 8px;
+}
+
+

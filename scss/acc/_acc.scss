@@ -1,0 +1,172 @@
+.account {
+    padding: 50px 0px;
+    // position: relative;
+    background: $backColor;
+    position: relative;
+    height: 1000px;    // .account__container
+
+    &__container {}
+
+    // .account__title
+
+    &__set{
+        display: flex;
+        justify-content: end;
+        gap: 5px;
+        align-items: center;
+    }
+
+    &__title {
+        @include adaptiv-value(font-size, 50, 20, 1);
+
+        color: #fff;
+        font-family: $fontTitle;
+        text-align: right;
+    }
+
+    // .account__img
+
+    &__img {
+        position: relative;
+        height: 100px;
+        
+
+    }
+
+    // .account__name
+
+    &__ic{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        z-index: 2;
+        border-radius: 30px;
+        border: 1px solid #6f34bb55
+
+    }
+
+    &__name {
+        top: 20px;
+        left: 60px;
+        border-radius: 20px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background: rgba(22, 1, 12, 0.385);
+       padding: 10px 50px;
+
+       width: 400px;
+       display: flex;
+       justify-content: start;
+        border: 2px solid #7c15b7;
+        box-shadow: 0 0 40px #7c15b7, inset 0 0 40px #7c15b7;
+        
+        position: absolute;
+        color: #fff;
+        font-family: $fontfamily;
+        font-size: 30px;
+    }
+
+    &__set{
+        position: absolute;
+        left: 450px;
+
+    }
+
+    // .account__rate
+
+    &__rate {
+        margin-top: 50px;
+    }
+
+    &__title-rate{
+        padding-left: 40px;
+        margin-top: 60px;
+        @include adaptiv-value(font-size, 50, 20, 1);
+        color: #fff;
+        font-family: $fontTitle;
+        text-align: right;
+
+    }
+}
+.rate {
+    // .rate__row  
+
+    &__text{
+        padding: 10px 20px;
+        color: #fff;
+        font-family: $fontfamily;
+        display: flex;
+        font-size: 28px;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+    &__img{
+        position: absolute;
+        z-index: 6;
+        top: -12px;
+        left: -6px;
+    }
+    &__img img{
+        border-radius: 20px;
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border: 1px solid #6f34bb55
+    }
+    
+
+    // .rate__person
+
+    &__person {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    // .rate__number
+
+    &__number {
+        font-size: 20px;
+        color: #ffffff62;
+    }
+
+    // .rate__pipe
+
+    &__wrapper{
+        display: flex;justify-content: end;
+        position: relative;
+    }
+
+    &__wrapper:hover{
+        transform: scale(1.02);
+        transition: 0.4s;
+    }
+
+    &__pipe {
+        width: 95%;
+ height: 50px;
+ border-radius: 20px;
+ margin-bottom: 2em;
+ background: #da79e858;
+ z-index: 5;
+
+    }
+
+    &__pipe.mouseover {height: 55px;
+    }
+
+    &__pipe.active {
+        border: 2px solid #a47fb38c;
+        box-shadow: 0 0 10px #cbb3d8, inset 0 0 0px #a75fd0;
+
+    }
+
+    &__pipe>div {
+        background: linear-gradient(90deg, rgb(54, 16, 89) 0%, rgba(147,38,139,1) 100%);
+        border-radius: 20px;
+        height: 50px;
+    }
+}

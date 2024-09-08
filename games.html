@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="/css/styleGames.css">
+    <link rel="stylesheet" href="/css/styleCard.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular" rel="stylesheet" />
+
+
+    <script src="/js/gsap.min.js"></script>
+    <script defer src="/js/bg-btns.js"></script> 
+
+    
+</head>
+<body>
+
+    
+    <div class="games">
+
+        <a href="/pages/mainPage.html" class="arrow"><span class="material-symbols-outlined">
+            door_front
+            </span></a>
+
+        <div class="flying-buttons"></div>
+        
+        <a href="/pages/acc.html" class="games__account">
+            <span style="font-size: 70px;" class="material-symbols-outlined">
+                person
+                </span>
+        </a>
+
+        <div class="games__container">
+            
+            <div class="games__cards">
+
+                <div class="games__column">
+
+                    <a id="cardClick" class="card__item" href="#popup">
+                        <div class="nft">                    
+                            <img class="nft__img" src="/img/find-pair.jpg" alt="flappy-bird"></a>
+                                        
+                            <div class="nft__title">
+                                Найди пару
+                            </div>
+                
+                            
+                        </div>
+                        
+                    </a>
+
+
+                    <a id="cardClick" class="card__item" href="#popup_2">
+                        <div class="nft">                        
+                            <img class="nft__img" src="/img/hero-stick.jpg" alt="flappy-bird"></a>                                            
+                            <div class="nft__title">
+                                Герой леса
+                            </div>              
+                        </div>
+                    </a>
+                </div>
+
+               
+                
+                <div class="games__column">
+                    <a id="cardClick" class="card__item" href="#popup_3">
+                        <div class="nft">
+                        
+                            <img class="nft__img" src="/img/flapp.jpg" alt="flappy-bird"></a>
+                            <div class="nft__title">
+                                Flappy bird
+                            </div>    
+                        </div>
+                    </a>
+
+
+
+                    <a id="cardClick" class="card__item"  href="#popup_4">
+                        <div class="nft">
+                            <img class="nft__img" src="/img/ghost-game.jpg" alt="flappy-bird"></a>
+                            <div class="nft__title">
+                                Призраки
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
+               
+                
+                           
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="popup" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__wrapper">
+                <a href="#header" class="popup__close close-popup"><img class="popup__close-img" src="/img/close.svg" alt=""></a>
+                <div class="popup__item item-card">
+                    <div class="item-card__img">
+                        <img class="item-card__imgg" src="/img/find-pair.jpg" alt="">
+                    </div>
+                    <div class="item-card__body">
+                        <div class="item-card__title">
+                            Найди пару
+                        </div>
+                        <div class="item-card__line">
+                        </div>
+                        
+                        <div class="item-card__text">
+                            Необходимо переворачивать карточки и находить одинаковые картинки
+                        </div>                        
+                         <div class="item-card__btn">
+                            <a class="item-card__link" href="/pages/pair.html">Ирать</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup_2" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__wrapper">
+
+                <a href="#header" class="popup__close close-popup"><img class="popup__close-img" src="/img/close.svg" alt=""></a>
+                <div class="popup__item item-card">
+                    <div class="item-card__img">
+                        <img class="item-card__imgg" src="/img/hero-stick.jpg" alt="">
+                    </div>
+
+                    <div class="item-card__body">
+
+                        <div class="item-card__title">
+                            Герой леса
+                        </div>
+                        <div class="item-card__line">
+
+                        </div>
+                        
+                        <div class="item-card__text">
+                            Ты украл ёлку из рощи. Донеси её в целости до общежития! Для пермещения зажимай
+                            левую клавишу мыши и увеличивай мост, с помощью которого переходи 
+                            с одного столба на другой. Будь аккуратен!
+                        </div>
+
+                        
+                         <div class="item-card__btn">
+                            <a class="item-card__link" href="/pages/santas.html">Ирать</a>
+
+                        </div>
+
+                        
+                           
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup_3" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__wrapper">
+
+                <a href="#header" class="popup__close close-popup"><img class="popup__close-img" src="/img/close.svg" alt=""></a>
+                    
+                <div class="popup__item item-card">
+                    <div class="item-card__img">
+                        <img class="item-card__imgg" src="/img/flapp.jpg" alt="">
+                    </div>
+
+                    <div class="item-card__body">
+
+                        <div class="item-card__title">
+                            flappy bird
+                        </div>
+                        <div class="item-card__line">
+
+                        </div>
+                        
+                        <div class="item-card__text">
+                            Задача пролететь через множество труб, 
+                            которые очень плотно расположены друг 
+                            от друга. Чтобы управлять птичкой, вам 
+                            нужно постоянно кликать левой кнопкой 
+                            мыши для поддержания ее полета и скорости. 
+                            Но помните, что в этом деле важна ваша быстрая реакция, чтобы птичка не столкнулась с препятствиями, иначе это будет моментальная смерть.
+                        </div>
+
+                        
+                         <div class="item-card__btn">
+                            <a class="item-card__link" href="/pages/flappy.html">Ирать</a>
+
+                        </div>
+
+                        
+                           
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup_4" class="popup">
+        <a href="#" class="popup__area"></a>
+        <div class="popup__body">
+            <div class="popup__wrapper">
+
+                <a href="#header" class="popup__close close-popup"><img class="popup__close-img" src="/img/close.svg" alt=""></a>
+                <div class="popup__item item-card">
+                    <div class="item-card__img">
+                        <img class="item-card__imgg" src="/img/ghost-game.jpg" alt="">
+                    </div>
+
+                    <div class="item-card__body">
+
+                        <div class="item-card__title">
+                            Охота на призраков
+                        </div>
+                        <div class="item-card__line">
+
+                        </div>
+                        
+                        <div class="item-card__text">
+                            Задача словить как можно больше призраков за 15 секунд.
+                            ЧТобы словить призрака нужно нажать на него левой клавишой мыши 2 раза
+
+                        </div>
+
+                        
+                         <div class="item-card__btn">
+                            <a class="item-card__link" href="/pages/ghost.html">Ирать</a>
+
+                        </div>
+
+                        
+                           
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <!-- <script src="/js/popup.js"></script>  -->
+
+    <script src="/js/menu.js"></script> 
+    <script src="/js/games.js"></script> 
+
+</body>
+</html>

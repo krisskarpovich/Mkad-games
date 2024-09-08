@@ -1,0 +1,190 @@
+.shape {
+background: $backColor;
+height: 100%;
+position: relative;
+
+
+
+    // .shape__container
+
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__wrapper{
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        height: 600px;
+
+    }
+
+    // .shape__block
+
+    &__block {
+        max-width: 500px;
+        padding: 150px 70px 0px 70px;
+        border-radius: 20px 0px 0px 20px;
+        background-color: #991ad0;
+
+
+
+
+    }
+
+    // .shape__form
+
+    &__form {
+        max-width: 500px;
+        padding: 90px 40px 0px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        background-color: #FFF;
+        border-radius: 0px 20px 20px 0px;
+        position: relative;
+    }
+
+    
+
+    
+}
+
+
+.form {
+    
+
+    // .form__title
+
+    &__title {
+        text-align: center;
+    color: #991ad0;
+    text-align: center;
+    font-family: $fontfamily;
+    font-size: rem(45);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 50px;
+    }
+
+    // .form__btn
+
+    &__btn {
+        width: 350px;
+        padding: 30px 50px;
+        background-color: #991ad0;
+        position: absolute;
+        left: 90px;
+        bottom: -35px;
+        border-radius: 20px;
+        color: #FFF;
+
+text-align: center;
+font-family: $fontTitle;
+font-size: 23px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-transform: uppercase;
+    }
+}
+
+
+
+
+
+
+  .mail{
+    background-color: #dedede;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 30px;
+
+  }
+
+  .fio{
+    background-color: #dedede;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 30px;
+
+  }
+
+  .pass{
+    background-color: #dedede;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 30px;
+
+  }
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    // .block__title
+
+    &__title {
+        color: #FFF;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+text-align: center;
+font-family: $fontfamily;
+text-transform: none;
+font-size: rem(45);
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+    }
+
+    // .block__text
+
+    &__text {
+        margin-bottom: 50px;
+        color: #FFF;
+
+text-align: center;
+font-family: $fontfamily;
+font-size: rem(18);
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+max-width: 400px;
+    }
+
+    // .block__btn
+
+    &__btn {
+        max-width: 350px;
+        padding: 30px 50px;
+        border: 2px solid #fff;
+
+        color: #FFF;
+        border-radius: 20px;
+
+text-align: center;
+font-family: $fontTitle;
+font-size: 23px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+    }
+}

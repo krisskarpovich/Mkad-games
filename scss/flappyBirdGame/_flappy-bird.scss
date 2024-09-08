@@ -1,0 +1,167 @@
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// 	font-family: $fontfamily;
+// }
+
+body{
+	position: relative;
+}
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('/img/flappyBack.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bird {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+
+@media (max-width: 768px){
+	.bird {
+		height: 40px;
+		width: 52px;
+	}
+}
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 8vw;
+	// background:radial-gradient(#300276 4%, #260d02);
+	background-image: url("/img/kirp.jpg");
+	
+}
+
+
+.message {
+	max-width: 600px;
+	position: absolute;
+	z-index: 10;
+	font-family: $fontTitle;
+	color: #fff;
+    background-color: #000000af;
+	top: 50%;
+	left: 50%;
+	@include adaptiv-value(font-size, 30, 10, 1);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	line-height: 160%;
+	
+}
+
+.messageStyle{
+	z-index: 11;
+	border: 2px solid #7c15b7;
+	// box-shadow: 0 0 40px #7c15b7, inset 0 0 40px #7c15b7;
+	padding: 70px;
+	display: flex;
+	border-radius: 30px;
+	color: #fff;
+}
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 4vh;
+	font-size: 4vh;
+	font-weight: 600;
+	color: white;
+	top: 20px;
+	right: 40px;
+	margin: 10px;
+text-transform: uppercase;
+	font-family: $fontfamily;
+	
+}
+.score_val {
+	color: #fff;
+	font-weight: bold;
+}
+
+
+.end {
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #000000af;
+	top: 0;
+	left: 0;
+	transition: all 0.8s ease 0s;
+	display: none;
+	justify-content: center;
+	align-items: center;
+  
+	  &__wrapper{
+		position: relative;
+		  width: 500px;
+		  border-radius: 20px;
+		  -webkit-backdrop-filter: blur(5px);
+		  backdrop-filter: blur(5px);
+		  background: rgba(22, 1, 12, 0.385);
+		  border: 2px solid #7c15b7;
+		  box-shadow: 0 0 40px #7c15b7, inset 0 0 40px #7c15b7;
+		  padding: 50px;
+  
+		  transition: all 0.8s ease 0s;
+  
+		  transform: perspective(600px) translate (0px, -100%) rotateX(45deg);
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		  color: #fff;
+		}
+  
+	  &__but{
+		margin-top: 10px;
+		display: flex;
+		gap: 20px;
+
+  
+	  }
+	  &__link.span{
+		
+  
+  
+	  }
+  
+  }
+
+  .material-symbols-outlined{
+	font-size: 100px;
+	color:$colorOfIcon;
+	text-shadow: #7c15b7 4px 4px 10px;
+  }
+
+  .title {
+	color: $colorOfIcon;
+	letter-spacing: 4px;
+	font-size: 1.75rem;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: $fontTitle;
+	padding-bottom: 20px;
+  }
+  
+  .title-score {
+	color: $colorOfIcon;
+	font-size: 1.2rem;
+	margin: 0;
+	text-transform: uppercase;
+	font-family: $fontTitle;
+  }
+
+//   .end {
+// 	transform: translate(0, 100%);
+//   }

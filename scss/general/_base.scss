@@ -1,0 +1,122 @@
+@use "sass:math";
+
+@import "_practise";
+
+@import url("https://fonts.googleapis.com/css?family=Rubik+Mono+One:regular");
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+
+$fz: rem(16);
+$backColor: linear-gradient(147deg, rgb(45, 3, 43) 7%, rgb(20, 1, 28) 26%, rgb(16, 2, 37) 54%, rgb(30, 3, 40) 100%);
+
+$fontfamily: "Rubik";
+$colorOfIcon: #8c00ff;
+$fontTitle: "Rubik Mono One";
+$colorOfTitle: #0B132A;
+$colorOfText: #4F5665;
+$colorWhite: #fff;
+$colorRed: #F53838;
+
+$minWidth: 320;
+$maxWidth: 1280;
+$maxWidthContainer: 1180;
+$containerPadding: 30;
+
+$responsiveType: 1;
+@import "_common";
+
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+
+$pc: em($containerWidth);
+$tablet: em(991);
+$mobile: em(767);
+$mobileSmall: em(479);
+
+@import "_nullstyle";
+
+
+
+body {
+    font-family: $fontfamily;
+    overflow-x: hidden;
+    .lock &{
+        overflow: hidden;
+        touch-action: none;
+        
+    }
+}
+
+
+
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    // .loaded&{
+
+    // }
+
+    >main{
+        flex: 1 1 auto;
+    }
+
+    > *{
+        min-width: 0;
+    }
+}
+
+//стили будут применяться ко всем
+//классам содержаищим *_container 
+//например header__container b nl 
+
+
+@if ($responsiveType==1){
+    //отзывчива
+    [class*="__container"] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+
+        @if($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2))
+        }
+    }
+}else {
+    //по брейкпоинтам 
+    [class*="__container"] {
+        margin: 0 auto;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        }@else{
+            @if($containerPadding>0) {
+                padding: 0 rem(math.div($containerPadding, 2))
+            }
+        }
+
+        @media(max-width: $pc) {
+            max-width: rem(970);
+        }
+
+        @media(max-width: $tablet) {
+            max-width: rem(750);
+        }
+
+        @media(max-width: $mobile) {
+            max-width: none;
+            @if ($containerPadding>0 and $maxWidthContainer>0) {
+                padding : 0 rem(math.div($containerPadding, 2))
+            }
+        }
+    
+    }
+}
+// @import "_preloader";
+
+// @import "_menu";

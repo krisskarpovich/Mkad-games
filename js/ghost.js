@@ -1,0 +1,1 @@
+// document.getElementById("myId").setAttribute('onclick', 'location.href = "url"'); 

@@ -1,0 +1,212 @@
+// .header{
+//     position: fixed;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+    
+// }
+
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000af;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+
+    &__area{
+        position: absolute;
+        width: 100%;
+        height: 100%;top: 0;
+        left: 0;
+
+    }
+ 
+    &__body{
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+    // .card__wrapper
+
+    &__wrapper {
+        position: relative;
+        width: 70%;
+        border-radius: 20px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background: rgba(22, 1, 12, 0.385);
+       
+        border: 2px solid #7c15b7;
+        box-shadow: 0 0 40px #7c15b7, inset 0 0 40px #7c15b7;
+        @include adaptiv-value(padding-top, 70, 0, 1);
+        @include adaptiv-value(padding-right, 70, 0, 1);
+        @include adaptiv-value(padding-left, 70, 0, 1);
+        @include adaptiv-value(padding-bottom, 70, 0, 1);
+                // padding: 70px;
+        display: flex;
+
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+        // transform: translate(0px, -100%);
+
+        transform: perspective(600px) translate (0px, -100%) rotateX(45deg);
+
+    }
+
+    &__item {
+        display: block;
+
+    }
+
+    &__close{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+   
+    
+
+    &__close:hover{
+        transform: scale(1.1);
+        transition: 0.7s;
+        
+    }
+
+    
+}
+.carsss{
+    display: block;
+
+}
+
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__wrapper{
+    transform: perspective(600px) translate (0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+.item-card {
+display: flex;
+align-items: center;
+@include adaptiv-value(gap, 75, 0, 1);
+
+// gap: 75px;
+    // .item-card__img
+
+    &__img {
+    }
+
+    &__imgg {
+        max-width: 200px;
+    }
+
+    @media (max-width: 920px){
+        &__img {display: none;}
+    }
+    // .item-card__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .item-card__title
+
+    &__title {
+        @include adaptiv-value(font-size, 30, 20, 1);
+
+        @include adaptiv-value(padding-bottom, 30, 0, 1);
+
+        color: #fff;
+        font-family: "Rubik Mono one";
+        font-size: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        
+    }
+
+    // .item-card__line
+
+    &__line {
+        @include adaptiv-value(margin-bottom, 30, 0, 1);
+
+        max-width: 560px;
+        height: 1px;
+        border: 1px solid #7c15b7;
+        box-shadow: 0 0 100px #7c15b7, inset 0 0 100px #7c15b7;
+
+    }
+
+    @media (max-width: 920px){
+
+        &__line {        
+            @include adaptiv-value(width, 450, 200, 1);
+        }
+    }
+
+    // .item-card__text
+
+    &__text {
+        @include adaptiv-value(font-size, 16, 12, 1);
+        color: #fff;
+        font-family: "Rubik";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 143.977%;
+        @include adaptiv-value(margin-bottom, 90, 0, 1);
+
+    }
+
+    // .item-card__btn
+
+    &__btn {
+        
+        border-radius: 20px;
+        @include adaptiv-value(padding-top, 20, 0, 1);
+        @include adaptiv-value(padding-right, 70, 20, 1);
+        @include adaptiv-value(padding-left, 70, 20, 1);
+        @include adaptiv-value(padding-bottom, 20, 0, 1);
+        
+        border: 2px solid #ffffff;
+        box-shadow: 0 0 40px #ffffff, inset 0 0 40px #ffffff;
+        text-align: center;
+        align-self: end;
+        
+    }
+
+     &__link {      
+        @include adaptiv-value(font-size, 40, 20, 1);
+        color: #ffffff;
+        font-family: "Rubik Mono one";
+        text-transform: uppercase;
+        
+    }
+
+    &__btn:hover {
+        transition: 1s;
+        transform: scale(1.02);
+        
+    }
+   
+
+}
+
+
+
+

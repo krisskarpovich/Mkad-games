@@ -1,0 +1,230 @@
+$dark-primary: #000;
+$dark-secondary: #ebd99f;
+$success: #b219ff;
+$reveal: #E5E5E5;
+$light-primary: #fff;
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@100;300;500;600&display=swap');
+
+.pair{
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: $backColor;
+  height: 100%;
+}
+
+.modal{
+  padding: 20px;
+  width: 400px;
+  position:absolute;
+  z-index:2;
+  
+  
+  // left: 50%;
+  // margin-left: -200px;
+  top: 50%;
+  margin-top: -100px;
+  border-radius: 2rem;
+  font-family: 'Creepster', cursive;
+  text-align:center;
+  margin-left: 50px;
+}
+.modal_text{
+  letter-spacing: 4px;
+  font-size: 1.75rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: $fontTitle;
+  padding-bottom: 20px;
+  color: #fff;
+  }
+
+  .modal_score{
+    font-size: 1.2rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: $fontTitle;
+  color: #fff;
+    }
+#success_modal{
+  
+  width: 500px;
+        border-radius: 20px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background: rgba(22, 1, 12, 0.385);
+    
+        // width: 1200px;
+        border: 2px solid #7c15b7;
+        box-shadow: 0 0 40px #7c15b7, inset 0 0 40px #7c15b7;
+        
+  display:none;
+}
+
+.end__link{
+  display: block;
+  
+}
+
+
+
+.end__but{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#shield{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  z-index:1;
+  background:black;
+  opacity: 0.5;
+  display:none;
+}
+
+
+header{
+  padding: 2rem;
+  display:flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  align-items:center;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+.butta{
+  border:0;
+  border-radius: 5rem;
+  padding: 0.5rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.butta:hover{
+  cursor:pointer;
+}
+
+
+
+.title{
+  font-size: 1.7rem;
+  font-family: $fontTitle;
+  color: $dark-secondary;
+}
+
+.flips{
+  position: absolute;
+  right: 40px;
+  top: 40px;
+
+}
+
+
+.details{
+  margin: 0 5rem;
+  padding: 0 3rem;
+  display:flex;
+  justify-content: space-around;
+}
+
+.text{
+  font-family: $fontTitle;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color:#fff
+}
+.dynamic_text{
+   font-family: $fontTitle;
+   text-transform: uppercase;
+   font-size: 1.5rem;
+  color: #fff;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  @include adaptiv-value(padding-top, 20, 0, 1);
+  @include adaptiv-value(padding-right, 20, 0, 1);
+  @include adaptiv-value(padding-bottom, 20, 0, 1);
+  @include adaptiv-value(padding-left, 20, 0, 1);
+  // padding: 20px;
+  background-color: #c7a2e421;
+  border-radius: 20px;
+}
+.card{
+  @include adaptiv-value(width, 110, 20, 1);
+  @include adaptiv-value(height, 110, 20, 1);
+  // // width: 8em;
+  // height: 8em;
+  background-color: transparent;
+  border-radius: 50%;
+  @include adaptiv-value(margin-top, 20, 10, 1);
+  @include adaptiv-value(margin-right, 20, 10, 1);
+  @include adaptiv-value(margin-bottom, 20, 10, 1);
+  @include adaptiv-value(margin-left, 20, 10, 1);
+
+  margin: 1rem;
+  text-align:center;
+  perspective: 1000px;
+}
+img{
+  width:3em;
+}
+
+.card:hover{
+  cursor:pointer;
+}
+
+.card_inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+// .card:hover .card_inner{
+//   transform: rotateY(180deg);
+// }
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+.front{
+  background: $dark-secondary;
+}
+.back{
+  transform: rotateY(180deg);
+  background: $reveal;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.attribution{
+  font-family: $fontTitle;
+  font-size: 0.7rem;
+  color: gray;
+  text-align: center;
+  margin-top: 2rem;
+}
+.attribution a{
+  text-decoration: underline;
+  color: $success;
+}
+
+.material-symbols-outlined{
+  font-size: 100px;
+  color:#7c15b7;
+  text-shadow: #7c15b7 4px 4px 10px;
+  background-color: rgba(0, 0, 0, 0)fff;
+}

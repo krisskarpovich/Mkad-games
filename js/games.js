@@ -1,0 +1,1 @@
+document.getElementById("cardClick").setAttribute('onclick', 'location.href = "/pages/card.html"'); 

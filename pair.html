@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pairs</title>
+    <link rel="stylesheet" href="/css/stylePair.css">
+    <script src="/js/pair.js" defer></script>
+    <script src="/js/gsap.min.js"></script>
+    <script defer src="/js/bg-btns.js"></script>
+   <script defer src=".js/custom-select.js"></script>
+</head>
+<body>
+     <div class="pair">
+
+      <a href="/pages/games.html" class="arrow"><span class="material-symbols-outlined">
+        door_front
+        </span></a>
+
+      <div class="flips">
+       <span class="text">Попыток </span>
+        <span class="dynamic_text" id="num_flips"></span>
+      </div>
+      
+      <div class="flying-buttons"></div>
+      <div class="pair__container">
+         <header>
+            <span class="title">memory game</span>
+          
+            <div class="buttons">
+              <button class="button" id="restart">Restart</button>
+              <button class="button" id="new_game">New Game </button>
+            </div>
+          </header>
+
+          
+          
+          <div class="details">
+            
+          </div>
+          <main>
+            <div class="row">
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <!-- <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div> -->
+              
+              
+            </div>
+          
+            <div class="row">
+              
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+
+
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <!-- <div class="card">
+          
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+          
+              </div> -->
+          
+            </div>
+          
+            <div class="row">
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <!-- <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div> -->
+          
+            </div>
+          
+            <div class="row">
+          
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div>
+              <!-- <div class="card">
+                <div class="card_inner">
+                  <div class="front"></div>
+                  <div class="back"></div>
+                </div>
+              </div> -->
+          
+            </div>
+          </main>
+          
+          
+          
+          <!-- modals -->
+          
+          
+          <div id="success_modal" class="modal">
+            <p class="modal_text">Победа</p>
+            <p class="modal_score">Скорость &nbsp;</p>
+
+            <div class="end__but">
+              <a class="end__link" href="/pages/games.html"><span class="material-symbols-outlined">
+                undo</span></a>
+
+              <div class="button" id="replay"><span class="material-symbols-outlined">
+                  refresh
+              </span></div>
+
+            </div>
+          </div>
+          
+          
+    </div>
+    <div id="shield"></div>
+    </div>
+    
+    
+</body>
+</html>

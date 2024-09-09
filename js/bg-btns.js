@@ -15,7 +15,7 @@ function createButtons(amount) {
 
     for (let i = 1; i < amount; i++) {
         let btn = document.createElement("img");
-        btn.src = "..img/button" + getRnd(2) + ".svg";
+        btn.src = "img/button" + getRnd(2) + ".svg";
         btn.className = "bg-btn";
         btn.style.top = getRnd(dh).toString() + "px";
         btn.style.left = getRnd(dw).toString() + "px";
